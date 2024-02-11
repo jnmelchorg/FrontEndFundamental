@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jose Nicolas Melchor Gutierrez">
+        <meta name="description" content="This page is used for learning purposes.">
+        <title>Learning how to create a webpage</title>
+        <link rel="icon" href="html5_icon.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <h1>This page covers tables.</h1>
+        <table>
+            <caption>This is a caption for this table.</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Column 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">row header 1.</th>
+                    <td>
+                        <time datetime="08:00">8 am</time> - <time datetime="11:00"> 11 am</time>
+                    </td>
+                    <td>Column 2 row 1</td>
+                </tr>
+                <tr>
+                    <th scope="row">row header 2.</th>
+                    <td>
+                        <time datetime="11:00">11 am</time> - <time datetime="13:00"> 1 pm</time>
+                    </td>
+                    <td>Column 2 row 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">row header 3.</th>
+                    <td colspan="2">Trying Column span to cover both columns.</td>
+                </tr>
+                <tr>
+                    <th scope="row">row header 4.</th>
+                    <td rowspan="2">Trying row span for 2 rows.</td>
+                    <td>Column 2 row 4</td>
+                </tr>
+                <tr>
+                    <th scope="row">row header 5.</th>
+                    <td>Column 2 row 5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">This is a table footer.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p>Back to <a href=".">main page</a>.</p>
+    </body>
+</html>
