@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jose Nicolas Melchor Gutierrez">
+        <meta name="description" content="This page is used for learning purposes.">
+        <title>Learning how to create a webpage</title>
+        <link rel="icon" href="html5_icon.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>This page is used for learning forms and inputs.</h1>
+            <p>Below will be a form that need to be filled by users.</p>
+        </header>
+        <main>
+            <article>
+                <h2>The form starts here</h2>
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>This section is about the text, password and tel types of inputs</legend>
+                        <p>
+                            <label for="FirstName">First Name:</label>
+                            <input type="text" name="FirstName" id="FirstName" placeholder="John" autocomplete="on" required autofocus>
+                        </p>
+
+                        <p>
+                            <label for="LastName">Last Name:</label>
+                            <input type="text" name="LastName" id="LastName" placeholder="Doe" autocomplete="on" required>
+                        </p>
+
+                        <p>
+                            <label for="Password">Password:</label>
+                            <input type="password" name="Password" id="Password" placeholder="Your secret" required>
+                        </p>
+
+                        <p>
+                            <label for="Phone">Password:</label>
+                            <input type="tel" name="Phone" id="Phone" placeholder="0XXXX XXXXXX" required pattern="[0]{1}[0-9]{4} [0-9]{6}">
+                        </p>
+
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" pattern="[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}" required autocomplete="on" placeholder="email@provider.com">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>This type is about the number type of input</legend>
+                        <p>
+                            <label for="millennia">Specify a millennia:</label>
+                            <input type="number" name="millennia" id="millennia" min="0" max="1000000" step="1000" value="5000">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>This part is all about the select tag and type list of the input tag</legend>
+                        <p>
+                            <label for="coffee">Favourite coffee:</label>
+                            <input name="coffee" id="coffee" type="text" list="coffee-list">
+                            <datalist id="coffee-list">
+                                <option value="Regular Coffee">
+                                <option value="Iced Coffee" selected>
+                                <option value="Latte">
+                                <option value="Other">
+                            </datalist>
+                        </p>
+                        <p>
+                            <label for="countries">Select favourite countries:</label>
+                            <select name="countries" id="countries" multiple size="4">
+                                <optgroup label="America">
+                                    <option value="colombia">Colombia</option>
+                                    <option value="panama">Panama</option>
+                                    <option value="united states of america">United States of America</option>
+                                </optgroup>
+                                <optgroup label="Europe">
+                                    <option value="united kingdom">United Kingdom</option>
+                                    <option value="germany">Germany</option>
+                                </optgroup>
+                                <option value="other">Other</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>This is about the type radio for the input tag</legend>
+                        <p>
+                            <input type="radio" name="food" id="hotdog" value="hot dog">
+                            <label for="hotdog">Hot dog</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="pizza" value="pizza">
+                            <label for="pizza">Pizza</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="OtherFood" value="OtherFood">
+                            <label for="OtherFood">Other</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>This is about the type checkbox for the tag input</legend>
+                        <p>
+                            <input type="checkbox" name="animals" id="dog" value="dog">
+                            <label for="dog">Dog</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="animals" id="dolphin" value="dolphin">
+                            <label for="dolphin">Dolphin</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="animals" id="OtherAnimal" value="OtherAnimal">
+                            <label for="OtherAnimal">Other</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>This is about the textarea tag</legend>
+                        <label for="message">Message:</label>
+                        <br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="type your message here"></textarea>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                </form>
+            </article>
+        </main>
+        <footer>
+            <p>Back to <a href=".">main page</a>.</p>
+        </footer>
+    </body>
+</html>
