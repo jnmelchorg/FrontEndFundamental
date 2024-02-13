@@ -1,0 +1,20 @@
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: antiquewhite;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.latin1 {
+    /* this is hexadecimal */
+    color: #000000;
+}
+
+.latin2{
+    color: hsl(200, 100%, 50%);
+}
