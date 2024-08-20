@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'League Spartan','Courier New', Courier, monospace;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "hd ra"
+    "re re"
+    "ft ft";
+    width: 92vw;
+    position: relative;
+    height: 100vh;
+}
+
+html::before {
+    content: "";
+    background: url(images/bg-pattern-top-desktop.svg) top left, url(images/bg-pattern-bottom-desktop.svg) bottom right ;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 42%, 70%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50vw;
+    height: 49vh;
+}
+
+.title {
+    font-size: 4vw;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    align-items: center;
+    justify-content: center;
+    margin: 1vh 10vw 1vh 10vw;
+}
+
+.main_paragraph {
+    font-size: 1.4vw;
+    color: hsla(300, 43%, 22%, 65%);
+    line-height: 4vh;
+    font-weight: 600;
+    margin: 1vh 5vw 1vh 10vw;
+}
+
+main {
+    display: contents;
+}
+
+.ratings {
+    grid-area: ra;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+    font-weight: 800;
+    width: 50vw;
+    height: 49vh;
+}
+
+.ratings li {
+    background-color: hsl(300, 24%, 96%);
+    text-align: start;
+    color: hsl(300, 43%, 22%);
+    border-radius: 8px;
+    padding: 2vh 2vw 2vh 2vw;
+    margin: 1vh 1vw 1vh 1vw;
+    font-size: 1.4vw;
+    width: 35vw;
+}
+
+.end-star {
+    margin-right: 15px;
+}
+
+.star{
+    width: 1.4vw;
+    height: auto;
+}
+
+.ratings li:first-child {
+    position: relative;
+    right: 12%;
+}
+
+.ratings li:nth-child(2) {
+    position: relative;
+    right: 6%;
+}
+
+
+.reviews {
+    grid-area: re;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 49vh;
+}
+
+.reviews li {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    color: hsla(0, 0%, 100%, 85%);
+    font-weight: 400;
+    line-height: 3vh;
+    list-style-type: none;
+    width: 25vw;
+    height: 30vh;
+    font-size: 1.2vw;
+    padding: 2vw;
+    margin: 1vw;
+}
+
+.reviews li:first-child {
+    position: relative;
+    bottom: 4vh
+}
+
+.reviews li:nth-child(2) {
+    position: relative;
+    bottom: 2vh
+}
+
+.header_reviwer {
+    display: grid;
+    grid-template-areas: 
+    "img na"
+    "img ve";
+    padding-bottom: 3vh;
+}
+
+.header_reviwer img {
+    grid-area: img;
+    border-radius: 50px;
+    width: 3vw;
+}
+
+.header_reviwer .reviewer_name {
+    text-align: start;
+    font-weight: 600;
+    margin-right: 7vw;
+}
+
+.header_reviwer .reviewer_verified {
+    color: hsl(333, 80%, 67%);
+}
+
+footer {
+    grid-area: ft;
+    grid-column: span 2;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 1.3vw;
+    height: 2vh;
+}
